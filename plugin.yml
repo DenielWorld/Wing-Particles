@@ -1,0 +1,17 @@
+name: Wings
+api: 3.0.0
+version: 2.0
+author: ["MrDinoDuck", "RushToEasy"]
+main: Wings\Main
+commands:
+ wing:
+  description: "Add wing to the player!"
+  default: true
+
+permission:
+ devil.wing:
+  default: op
+  description: Devil Wing Permission
+ angle.wing:
+  default: op
+  description: Angle Wing Permission
