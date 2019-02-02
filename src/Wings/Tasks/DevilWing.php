@@ -13,7 +13,7 @@ class DevilWing extends Task{
 	
 	public function __construct(Main $plugin){
 		$this->plugin = $plugin;
-		$this->plugin->getScheduler()->scheduleRepeatingTask($this, 10);
+		$this->plugin->getScheduler()->scheduleRepeatingTask($this, (int)$this->plugin->checker);
 	}
 
 	public function onRun(int $currentTick){
