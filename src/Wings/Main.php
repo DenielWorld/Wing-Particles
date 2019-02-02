@@ -17,9 +17,16 @@ class Main extends PluginBase{
 	public $wingdevil = [];
 	public $wingthienthan = [];
 
+	/** @var Config */
+	public $config;
+	public $checker;
+
 	public function onEnable () : void{
 		$this->taskwingdevil = new DevilWing($this);
 		$this->taskwingthienthan = new AngleWing($this);
+		$this->saveResource("time.yml");
+		$config = new Config($this->getDataFolder() . "time.yml", Config::YAML);
+		$this->checker = $config->get("time-update");
 		$this->getServer()->getLogger()->info("§b         
 | |  | (_)            
 | |  | |_ _ __   __ _ 
